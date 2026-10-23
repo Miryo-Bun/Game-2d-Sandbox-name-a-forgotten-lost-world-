@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://w0efrsrxhox8"]
+
+[ext_resource type="Script" uid="uid://patqjstitm62" path="res://a_forgotten_lost_world_version_0.1.gd" id="1_2myp5"]
+[ext_resource type="Texture2D" uid="uid://bin0qt3dg11bl" path="res://Фон/videoframe_1167.png" id="2_84bx2"]
+
+[node name="Menu" type="Node2D" unique_id=2096333377]
+script = ExtResource("1_2myp5")
+
+[node name="Videoframe1167" type="Sprite2D" parent="." unique_id=2103782704]
+position = Vector2(578.49994, 350)
+scale = Vector2(1.8109374, 1.7949998)
+texture = ExtResource("2_84bx2")
+
+[node name="Play" type="Button" parent="." unique_id=601531182]
+offset_left = 444.0
+offset_top = 273.0
+offset_right = 671.0
+offset_bottom = 350.0
+theme_override_font_sizes/font_size = 50
+text = "Play"
+
+[node name="Exit" type="Button" parent="Play" unique_id=1532789951]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 129.0
+offset_right = 226.0
+offset_bottom = 206.0
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+
+[node name="Label" type="Label" parent="Play/Exit" unique_id=568242636]
+layout_mode = 0
+offset_left = -141.0
+offset_top = -296.0
+offset_right = 395.0
+offset_bottom = -174.0
+theme_override_font_sizes/font_size = 50
+text = "A Forgotten lost world"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Play/Exit" to="." method="_on_exit_pressed"]
